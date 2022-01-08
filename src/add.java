@@ -1,11 +1,37 @@
 public class add {
 
-        public static void main(String args[]) {
-            int x=10;
-            int y=25;
-            int z=x+y;
 
-            System.out.println("Sum of x+y = " + z);
+
+    private static  Testclass tc;
+    private int x;
+    private int y;
+    private add(int x,int y){
+        this.x=x;
+        this.y=y;
+    }
+
+    public static Testclass getTc(int x,int y){
+        if(tc == null){
+            tc = new Testclass(x,y);
         }
+        return tc;
+    }
+
+
+
+    public static void main(String args[]) {
+
+    }
+    private static class TestClass {
+
+        public TestClass() {
+        }
+
+        private TestClass(int x, int y) {
+            int z = x+y;
+        }
+    }
+
+}
 
 }
